@@ -1,0 +1,124 @@
+label.form-label {
+    z-index: 999 !important;
+}
+
+a.btn.btn-danger.btn-link {
+    background: red !important;
+    color: white !important;
+}
+
+a.btn.btn-success.btn-link {
+    background: green !important;
+    color: white !important;
+    margin-right: 10px;
+}
+
+#navbar {
+  justify-content: right !important;
+}
+
+input#email {
+    border: 1px solid;
+    padding: 0.5rem;
+}
+
+div#DataTables_Table_0_filter {
+    display: none !important;
+}
+
+div#DataTables_Table_0_processing {
+    text-align: center;
+}
+
+div#DataTables_Table_0_paginate {
+    margin-top: 20px;
+    text-align: right;
+}
+
+td.dataTables_empty {
+    text-align: center;
+}
+
+td {
+    padding-left: 2% !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:active {
+    cursor: default;
+    color: #666 !important;
+    border: 1px solid transparent;
+    background: transparent;
+    box-shadow: none;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    box-sizing: border-box;
+    display: inline-block;
+    min-width: 1.5em;
+    padding: .5em 1em;
+    margin-left: 2px;
+    text-align: center;
+    text-decoration: none !important;
+    cursor: pointer;
+    color: #333 !important;
+    border: 1px solid transparent;
+    border-radius: 2px;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+    color: #333 !important;
+    border: 1px solid #979797;
+    background-color: white;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%, #dcdcdc));
+    background: -webkit-linear-gradient(top, white 0%, #dcdcdc 100%);
+    background: -moz-linear-gradient(top, white 0%, #dcdcdc 100%);
+    background: -ms-linear-gradient(top, white 0%, #dcdcdc 100%);
+    background: -o-linear-gradient(top, white 0%, #dcdcdc 100%);
+    background: linear-gradient(to bottom, white 0%, #dcdcdc 100%);
+}
+
+.bg-gradient-Complete {
+    background-image: linear-gradient(195deg, #66BB6A 0%, #43A047 100%);
+}
+
+.bg-gradient-Doing {
+    background-image: linear-gradient(195deg, #49a3f1 0%, #1A73E8 100%);
+}
+
+.bg-gradient-Pending {
+    background-image: linear-gradient(195deg, #FFA726 0%, #FB8C00 100%);
+}
+
+.select2.select2-container.select2-container--default{
+    width: 100%!important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: #444;
+    line-height: 35px !important;
+}
+
+.select2-container .select2-selection--single {
+    height: 35px !important;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-left: 7px;
+}
+
+a.btn.bg-gradient-dark.mb-0 {
+    height: 35px;
+    line-height: 15px;
+}
+
+.form-control{
+    padding: 0.5rem !important;
+    border: 1px solid #d2d6da !important;
+}
+
+.text-red{
+    color: red;
+}
+.close{
+    border: 0.5px gray;
+}
+
