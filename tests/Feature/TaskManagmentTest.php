@@ -41,7 +41,7 @@ class TaskManagmentTest extends TestCase
          $response = $this->actingAs($user)->put('/tasks/'.$task->id, [
             '_token' => csrf_token(),
             'title' => 'Test Title2 edit',
-            'due_date' => '',
+            'due_date' => '2024-05-11 13:30:00',
             'description' => 'Some Description edit',
         ]);
              
