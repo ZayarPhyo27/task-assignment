@@ -1,7 +1,7 @@
 
 @extends('layout.app')
 @section('main-content')
-<div class="container mt-5">
+<div class="container ">
     <div class="card mb-4 shadow-sm">
         <div class="card-header bg-primary text-white">
             Order #{{ $order->id }} - {{ $order->payment_method }}
@@ -52,6 +52,10 @@
             </tbody>
         </table>
     </div>
+</div>
+
+<div class="d-flex justify-content-end  mb-3">
+    <a href="/orders" class="btn btn-danger">Back to Orders</a>
 </div>
 @endsection
 

@@ -258,61 +258,6 @@
   <!-- Login -->
 
   <header id="header" class="site-header text-black">
-    <div class="header-top border-bottom py-2">
-      <div class="container-lg">
-        <div class="row justify-content-evenly">
-          <div class="col">
-            <ul class="social-links list-unstyled d-flex m-0">
-              <li class="pe-2">
-                <a href="#">
-                  <svg class="facebook" width="20" height="20">
-                    <use xlink:href="#facebook"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="pe-2">
-                <a href="#">
-                  <svg class="instagram" width="20" height="20">
-                    <use xlink:href="#instagram"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="pe-2">
-                <a href="#">
-                  <svg class="youtube" width="20" height="20">
-                    <use xlink:href="#youtube"></use>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <svg class="pinterest" width="20" height="20">
-                    <use xlink:href="#pinterest"></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="col d-none d-md-block">
-            <p class="text-center text-black m-0"><strong>Special Offer</strong>: Free Shipping on all the orders above $100
-            </p>
-          </div>
-          <div class="col">
-            <ul class="d-flex justify-content-end gap-3 list-unstyled m-0">
-              <li>
-                <a href="#">Contact</a>
-              </li>
-              <li>
-                <a href="#">Cart</a>
-              </li>
-              <li>
-                <a href="#">Login</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
     <nav id="header-nav" class="navbar navbar-expand-lg">
       <div class="container-lg">
         <a class="navbar-brand" href="index.html">
@@ -334,60 +279,14 @@
           </div>
           <div class="offcanvas-body">
             <ul id="navbar" class="navbar-nav fw-bold justify-content-end align-items-center flex-grow-1">
-              <li class="nav-item dropdown">
-                <a class="nav-link me-5 active dropdown-toggle border-0" href="#" data-bs-toggle="dropdown"
-                  aria-expanded="false">Home</a>
-                <ul class="dropdown-menu fw-bold">
-                  <li>
-                    <a href="index.html" class="dropdown-item">Home V1</a>
-                  </li>
-                  <li>
-                    <a href="index.html" class="dropdown-item">Home V2 </a>
-                  </li>
-                </ul>
+
+              <li class="nav-item">
+                <a class="nav-link me-5" href="#">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link me-5" href="#">Men</a>
+                <a class="nav-link me-5" href="#">About Us</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link me-5" href="#">Women</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link me-5 active dropdown-toggle border-0" href="#" data-bs-toggle="dropdown"
-                  aria-expanded="false">Page</a>
-                <ul class="dropdown-menu fw-bold">
-                  <li>
-                    <a href="index.html" class="dropdown-item">About Us </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="index.html">Shop </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="index.html">Blog </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="index.html">Single Product </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="index.html">Single Post </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="index.html">Styles </a>
-                  </li>
-                  <li>
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#modallong" class="dropdown-item">cart</a>
-                  </li>
-                  <li>
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#modallogin" class="dropdown-item">Login</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link me-5" href="index.html">Shop</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link me-5" href="#">Sale</a>
-              </li>
+
             </ul>
           </div>
         </div>
@@ -730,7 +629,7 @@
   <footer id="footer" class="py-5 border-top">
     <div class="container-lg">
       <div class="row">
-        <div class="col-lg-2 pb-3">
+        <div class="col-lg-3 pb-3">
           <div class="footer-menu">
             <h5 class="widget-title pb-2">Info</h5>
             <ul class="menu-list list-unstyled">
@@ -758,7 +657,7 @@
             </ul>
           </div>
         </div>
-        <div class="col-lg-2 pb-3">
+        <div class="col-lg-3 pb-3">
           <div class="footer-menu">
             <h5 class="widget-title pb-2">About</h5>
             <ul class="menu-list list-unstyled">
@@ -786,35 +685,8 @@
             </ul>
           </div>
         </div>
-        <div class="col-lg-2 pb-3">
-          <div class="footer-menu">
-            <h5 class="widget-title pb-2">Women Shoes</h5>
-            <ul class="menu-list list-unstyled">
-              <li class="pb-2">
-                <a href="#">Track Your Order</a>
-              </li>
-              <li class="pb-2">
-                <a href="index.html">Our Blog</a>
-              </li>
-              <li class="pb-2">
-                <a href="#">Privacy policy</a>
-              </li>
-              <li class="pb-2">
-                <a href="#">Shipping</a>
-              </li>
-              <li class="pb-2">
-                <a href="#">Contact Us</a>
-              </li>
-              <li class="pb-2">
-                <a href="#">Help</a>
-              </li>
-              <li class="pb-2">
-                <a href="#">Community</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-2 pb-3">
+
+        <div class="col-lg-3 pb-3">
           <div class="footer-menu">
             <h5 class="widget-title pb-2">Popular</h5>
             <ul class="menu-list list-unstyled">
@@ -839,26 +711,8 @@
             </ul>
           </div>
         </div>
-        <div class="col-lg-2 pb-3">
-          <div class="footer-menu">
-            <h5 class="widget-title pb-2">Mens Collection</h5>
-            <ul class="menu-list list-unstyled">
-              <li class="pb-2">
-                <a href="#">Delivery</a>
-              </li>
-              <li class="pb-2">
-                <a href="index.html">About Us</a>
-              </li>
-              <li class="pb-2">
-                <a href="#">Shoes</a>
-              </li>
-              <li class="pb-2">
-                <a href="#">Contact Us</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-2 pb-3">
+
+        <div class="col-lg-3 pb-3">
           <div class="footer-menu">
             <h5 class="widget-title pb-3">Get In Touch</h5>
             <div class="footer-contact-text">
@@ -867,14 +721,6 @@
               <span class="text-hover fw-bold light-border"><a href="mailto:contact@yourwebsite.com">contact@yourwebsite.com</a></span>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <p>© Copyright Stylish 2023.</p>
-        </div>
-        <div class="col-md-6 text-lg-end">
-          <p>Free HTML by <a href="https://templatesjungle.com/" target="_blank">TemplatesJungle</a><br> Distributed by <a href="https://themewagon.com" target="blank">ThemeWagon</a> </p>
         </div>
       </div>
     </div>
@@ -927,7 +773,7 @@
                 cartItem.classList.add('mini-cart-item','mt-2', 'd-flex', 'border-bottom', 'pb-3');
                 cartItem.innerHTML = `
 
-                    <div class="col-lg-2 col-md-3 col-sm-2 me-4">
+                    <div class="col-lg-3 col-md-3 col-sm-2 me-4">
                         <a href="#" title="product-image">
                             <img src="${image}" class="img-fluid modal-product-img" alt="${name}">
                         </a>
