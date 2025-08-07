@@ -34,7 +34,7 @@ class TaskController extends Controller
                     ->addIndexColumn()
                     ->addColumn('action', function($row){
                         $btn = "";
-                            if($row->status == config("web_constant.task_status.Pending"))
+                            // if($row->status == config("web_constant.task_status.Pending"))
                             $btn = '<a rel="tooltip" class="btn btn-success btn-link mr-2" href="tasks/'.$row->id.'/edit"  data-original-title="" title="">
                             <i class="material-icons">edit</i>
                             <div class="ripple-container"></div>
@@ -91,7 +91,7 @@ class TaskController extends Controller
             'description' => ['required'],
         ]);
 
-       
+
         $result = true;
         DB::beginTransaction();
         try {
@@ -141,7 +141,7 @@ class TaskController extends Controller
     public function edit(Request $request,$id)
     {
         $task = Task::find($id);
-    
+
         return view('task-management.update',[
                     'task' => $task,
                     'keyword' => 'Update Task',
@@ -187,7 +187,7 @@ class TaskController extends Controller
         return redirect('tasks');
     }
 
-    
+
 
     /**
      * Remove the specified resource from storage.
@@ -201,7 +201,7 @@ class TaskController extends Controller
         try {
              Task::where('id',$id)
                         ->delete();
-             
+
              DB::commit();
         } catch (\Throwable $th) {
             dd($th);
@@ -212,24 +212,24 @@ class TaskController extends Controller
 
 
     public function doingState($id)
-    { 
+    {
 
         $task = Task::find($id);
 
         if($task){
             DB::beginTransaction();
         try {
-           
-             $data['status'] = config('web_constant.task_status.Doing'); 
+
+             $data['status'] = config('web_constant.task_status.Doing');
              $ans = $task->update($data);
-            
+
              if(!$ans){
-              
+
                  DB::rollback();
                  $msg = "Cant change state.";
                  $code = 500;
              }
-             
+
              $msg = "Change state to doing state sucessfully.";
              $code = 200;
              DB::commit();
@@ -246,13 +246,13 @@ class TaskController extends Controller
          $headers['status'] = $ans;
          $headers['code'] = $code;
          $headers['message'] = $msg;
-        
+
          return $headers;
-        
+
     }
 
     public function completeState($id)
-    { 
+    {
         $task = Task::find($id);
 
         if($task){
@@ -262,14 +262,14 @@ class TaskController extends Controller
              $ans = $task->update($data);
 
              if(!$ans){
-                
+
                  DB::rollback();
                  $msg = "Cant change state.";
                  $code = 500;
              }
              $msg = "Change state to doing state sucessfully.";
              $code = 200;
-        
+
              DB::commit();
             } catch (\Throwable $th) {
                 dd($th);
@@ -284,8 +284,8 @@ class TaskController extends Controller
         $headers['status'] = $ans;
         $headers['code'] = $code;
         $headers['message'] = $msg;
-       
+
         return $headers;
-        
+
     }
 }

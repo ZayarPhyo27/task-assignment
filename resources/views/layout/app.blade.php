@@ -33,10 +33,10 @@
                         <form action="" method="post" id="confirm-form">
                             @method('DELETE')
                             @csrf
-                            
+
                             <a class="btn btn-success bg-blue dark-text save-btn confirm-delete-button">Sure</a>
                             <a class="btn btn-danger cancel-btn" data-dismiss="modal">Cancel</a>
-                           
+
                         </form>
                     </div>
                 </div>
@@ -55,4 +55,6 @@
     $(document).on('click','.close, .cancel-btn',function(){
        $('#confirm-modal').modal('hide');
     });
+
+
 </script>
