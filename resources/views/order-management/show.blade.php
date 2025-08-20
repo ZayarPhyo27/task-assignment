@@ -7,7 +7,9 @@
             Order #{{ $order->id }} - {{ $order->payment_method }}
         </div>
         <div class="card-body">
+            <p><strong>OrderID:</strong> {{ 'ORD_' . str_pad($order->id, 4, '0', STR_PAD_LEFT) }}</p>
             <p><strong>Name:</strong> {{ $order->customer_name }}</p>
+            <p><strong>Email:</strong> {{ $order->gmail }}</p>
             <p><strong>Phone:</strong> {{ $order->customer_phone }}</p>
             <p><strong>Address:</strong> {{ $order->customer_address }}</p>
 
@@ -34,9 +36,9 @@
                     <tr>
                         <td><img src="{{ $product->image }}" alt="{{ $product->product_name }}" width="60"></td>
                         <td>{{ $product->product_name }}</td>
-                        <td>{{ $product->price }}$</td>
+                        <td>{{ number_format($product->price, 0) }}  $</td>
                         <td>{{ $product->quantity }}</td>
-                        <td>{{ $product->price * $product->quantity }}</td>
+                        <td>{{ $product->price * $product->quantity }} $</td>
                     </tr>
                 @endforeach
                  <tfoot>
@@ -46,7 +48,7 @@
                 </tr>
                 <tr>
                     <td colspan="4" class="text-end fw-bold">Total Amount</td>
-                    <td class="fw-bold">{{ number_format($order->total, 2) }}</td>
+                    <td class="fw-bold">{{ number_format($order->total, 0) }} $</td>
                 </tr>
             </tfoot>
             </tbody>

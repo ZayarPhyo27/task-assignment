@@ -97,6 +97,7 @@ class ProductController extends Controller
 
         $request->validate([
             'name' => 'required|string',
+            'qty' => 'required|integer',
             'color' => 'required|string',
             'size' => 'required|integer',
             'description' => 'nullable|string',
@@ -181,6 +182,7 @@ class ProductController extends Controller
 
         $request->validate([
             'name' => 'required|string',
+            'qty' => 'required|string',
             'color' => 'required|string',
             'size' => 'required|integer',
             'description' => 'nullable|string',

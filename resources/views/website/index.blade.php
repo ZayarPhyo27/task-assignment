@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Stylish - Shoes Online Store HTML Template</title>
+  <title>Stylish - Shoes Online Store</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +10,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="author" content="TemplatesJungle">
   <meta name="keywords" content="Online Store">
-  <meta name="description" content="Stylish - Shoes Online Store HTML Template">
+  <meta name="description" content="Stylish - Shoes Online Store">
 
   <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
   <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/vendor.css') }}">
@@ -138,12 +138,7 @@
           <use xlink:href="#close"></use>
         </svg>
       </div>
-      <form id="search-form" class="text-lg-center text-md-left pt-3" action="index.html" method="get">
-        <input type="text" class="search-input" placeholder="Search...">
-        <svg class="search">
-          <use xlink:href="#search"></use>
-        </svg>
-      </form>
+
     </div>
   </div>
 
@@ -219,7 +214,7 @@
 
   <!-- cart view -->
 
-  <div class="modal fade" id="modallogin" tabindex="-1" aria-modal="true" role="dialog">
+  {{-- <div class="modal fade" id="modallogin" tabindex="-1" aria-modal="true" role="dialog">
     <div class="modal-dialog modal-fullscreen-md-down modal-md modal-dialog-centered" role="document">
       <div class="modal-content p-4">
         <div class="modal-header mx-auto border-0">
@@ -254,13 +249,13 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> --}}
   <!-- Login -->
 
   <header id="header" class="site-header text-black">
     <nav id="header-nav" class="navbar navbar-expand-lg">
       <div class="container-lg">
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="/website">
           <img src={{ asset('assets/images/main-logo.png') }} class="logo" alt="logo">
         </a>
         <button class="navbar-toggler d-flex d-lg-none order-3 border-0 p-1 ms-2" type="button" data-bs-toggle="offcanvas"
@@ -271,7 +266,7 @@
         </button>
         <div class="offcanvas offcanvas-end" tabindex="-1" id="bdNavbar">
           <div class="offcanvas-header px-4 pb-0">
-            <a class="navbar-brand ps-3" href="index.html">
+            <a class="navbar-brand ps-3" href="/website">
               <img src={{ asset('assets/images/main-logo.png') }} class="logo" alt="logo">
             </a>
             <button type="button" class="btn-close btn-close-black p-5" data-bs-dismiss="offcanvas" aria-label="Close"
@@ -283,22 +278,22 @@
               <li class="nav-item">
                 <a class="nav-link me-5" href="#">Home</a>
               </li>
-              <li class="nav-item">
+              {{-- <li class="nav-item">
                 <a class="nav-link me-5" href="#">About Us</a>
-              </li>
+              </li> --}}
 
             </ul>
           </div>
         </div>
         <div class="user-items ps-0 ps-md-5">
           <ul class="d-flex justify-content-end list-unstyled align-item-center m-0">
-            <li class="pe-3">
+            {{-- <li class="pe-3">
               <a href="login" data-bs-toggle="modal" data-bs-target="#modallogin" class="border-0">
                 <svg class="user" width="24" height="24">
                   <use xlink:href="#user"></use>
                 </svg>
               </a>
-            </li>
+            </li> --}}
             <li class="pe-3">
               <a href="#" data-bs-toggle="modal" data-bs-target="#modallong" class="border-0">
                 <svg class="shopping-cart" width="24" height="24">
@@ -306,13 +301,13 @@
                 </svg>
               </a>
             </li>
-            <li>
+            {{-- <li>
               <a href="#" class="search-item border-0" data-bs-toggle="collapse" data-bs-target="#search-box" aria-label="Toggle navigation">
                 <svg class="search" width="24" height="24">
                   <use xlink:href="#search"></use>
                 </svg>
               </a>
-            </li>
+            </li> --}}
           </ul>
         </div>
       </div>
@@ -328,7 +323,7 @@
               <img src={{ asset('assets/images/card-image1.jpg') }} alt="shoes" class="img-fluid jarallax-img">
               <div class="cart-concern p-3 m-3 p-lg-5 m-lg-5">
                 <h2 class="card-title display-3 light">Stylish shoes for Women</h2>
-                <a href="index.html"
+                <a href="/website"
                   class="text-uppercase light mt-3 d-inline-block text-hover fw-bold light-border">Shop Now</a>
               </div>
             </div>
@@ -340,7 +335,7 @@
                   <img src={{ asset('assets/images/card-image2.jpg') }} alt="shoes" class="img-fluid jarallax-img">
                   <div class="cart-concern p-3 m-3 p-lg-5 m-lg-5">
                     <h2 class="card-title style-2 display-4 light">Sports Wear</h2>
-                    <a href="index.html"
+                    <a href="/website"
                       class="text-uppercase light mt-3 d-inline-block text-hover fw-bold light-border">Shop Now</a>
                   </div>
                 </div>
@@ -350,7 +345,7 @@
                   <img src={{ asset('assets/images/card-image3.jpg') }} alt="shoes" class="img-fluid jarallax-img">
                   <div class="cart-concern p-3 m-3 p-lg-5 m-lg-5">
                     <h2 class="card-title style-2 display-4 light">Fashion Shoes</h2>
-                    <a href="index.html"
+                    <a href="/website"
                       class="text-uppercase light mt-3 d-inline-block text-hover fw-bold light-border">Shop Now</a>
                   </div>
                 </div>
@@ -362,7 +357,7 @@
               <img src={{ asset('assets/images/card-image4.jpg') }} alt="shoes" class="img-fluid jarallax-img">
               <div class="cart-concern p-3 m-3 p-lg-5 m-lg-5">
                 <h2 class="card-title display-3 light">Stylish shoes for men</h2>
-                <a href="index.html"
+                <a href="/website"
                   class="text-uppercase light mt-3 d-inline-block text-hover fw-bold light-border">Shop Now</a>
               </div>
             </div>
@@ -374,7 +369,7 @@
                   <img src={{ asset('assets/images/card-image5.jpg') }} alt="shoes" class="img-fluid jarallax-img">
                   <div class="cart-concern p-3 m-3 p-lg-5 m-lg-5">
                     <h2 class="card-title style-2 display-4 light">Men Shoes</h2>
-                    <a href="index.html"
+                    <a href="/website"
                       class="text-uppercase light mt-3 d-inline-block text-hover fw-bold light-border">Shop Now</a>
                   </div>
                 </div>
@@ -384,7 +379,7 @@
                   <img src={{ asset('assets/images/card-image6.jpg') }} alt="shoes" class="img-fluid jarallax-img">
                   <div class="cart-concern p-3 m-3 p-lg-5 m-lg-5">
                     <h2 class="card-title style-2 display-4 light">Women Shoes</h2>
-                    <a href="index.html"
+                    <a href="/website"
                       class="text-uppercase light mt-3 d-inline-block text-hover fw-bold light-border">Shop Now</a>
                   </div>
                 </div>
@@ -421,7 +416,7 @@
       <div class="display-header d-flex align-items-center justify-content-between">
         <h2 class="section-title text-uppercase">All Products</h2>
         <div class="btn-right">
-          <a href="index.html" class="d-inline-block text-uppercase text-hover fw-bold">View all</a>
+          <a href="/website" class="d-inline-block text-uppercase text-hover fw-bold">View all</a>
         </div>
       </div>
       <div class="product-content padding-small">
@@ -502,7 +497,7 @@
               </div>
               <div class="card-detail d-flex justify-content-between align-items-center mt-3">
                 <h3 class="card-title fs-6 fw-normal m-0">
-                  <a href="index.html">Running shoes for men</a>
+                  <a href="/website">Running shoes for men</a>
                 </h3>
                 <span class="card-price fw-bold">$99</span>
               </div>
@@ -530,7 +525,7 @@
               </div>
               <div class="card-detail d-flex justify-content-between align-items-center mt-3">
                 <h3 class="card-title fs-6 fw-normal m-0">
-                  <a href="index.html">Running shoes for men</a>
+                  <a href="/website">Running shoes for men</a>
                 </h3>
                 <span class="card-price fw-bold">$99</span>
               </div>
@@ -558,7 +553,7 @@
               </div>
               <div class="card-detail d-flex justify-content-between align-items-center mt-3">
                 <h3 class="card-title fs-6 fw-normal m-0">
-                  <a href="index.html">Running shoes for men</a>
+                  <a href="/website">Running shoes for men</a>
                 </h3>
                 <span class="card-price fw-bold">$99</span>
               </div>
@@ -586,7 +581,7 @@
               </div>
               <div class="card-detail d-flex justify-content-between align-items-center mt-3">
                 <h3 class="card-title fs-6 fw-normal m-0">
-                  <a href="index.html">Running shoes for men</a>
+                  <a href="/website">Running shoes for men</a>
                 </h3>
                 <span class="card-price fw-bold">$99</span>
               </div>
@@ -606,7 +601,7 @@
               <h3 class="card-title display-3">
                 <a href="#">Minimal Collection</a>
               </h3>
-              <a href="index.html" class="text-uppercase mt-3 d-inline-block text-hover fw-bold">Shop Now</a>
+              <a href="/website" class="text-uppercase mt-3 d-inline-block text-hover fw-bold">Shop Now</a>
             </div>
           </div>
         </div>
@@ -617,7 +612,7 @@
               <h3 class="card-title display-3">
                 <a href="#">Sneakers Collection</a>
               </h3>
-              <a href="index.html" class="text-uppercase mt-3 d-inline-block text-hover fw-bold">Shop Now</a>
+              <a href="/website" class="text-uppercase mt-3 d-inline-block text-hover fw-bold">Shop Now</a>
             </div>
           </div>
         </div>
@@ -637,7 +632,7 @@
                 <a href="#">Track Your Order</a>
               </li>
               <li class="pb-2">
-                <a href="index.html">Our Blog</a>
+                <a href="/website">Our Blog</a>
               </li>
               <li class="pb-2">
                 <a href="#">Privacy policy</a>
@@ -700,7 +695,7 @@
                 <a href="#">Best Sales</a>
               </li>
               <li class="pb-2">
-                <a href="index.html">Stores</a>
+                <a href="/website">Stores</a>
               </li>
               <li class="pb-2">
                 <a href="#" data-bs-toggle="modal" data-bs-target="#modallogin">Login</a>
@@ -779,7 +774,7 @@
                         </a>
                     </div>
                      <input type="hidden" name="product_id" class="product_id" value="${product_id}">
-                    <div class="col-lg-9 col-md-8 col-sm-8">
+                    <div class="col-lg-8 col-md-8 col-sm-8">
                         <div class="product-header d-flex justify-content-between align-items-center mb-3">
                             <h4 class="product-title fs-6 me-5">${name}</h4>
                             <a href="#" class="remove" aria-label="Remove this item">

@@ -41,7 +41,9 @@
                         <th> No</th>
                         <th>Name</th>
                         <th>Phone Number</th>
-                        <th>Address</th>
+                        <th>Order Id</th>
+                        {{-- <th>Address</th> --}}
+
                         <th>Status</th>
                         <th>Order Date</th>
                         <th>Action </th>
@@ -75,7 +77,9 @@
                        {data: 'DT_RowIndex', name: 'DT_RowIndex', class : 'data-index'},
                        {data: 'customer_name', name: 'customer_name'},
                        {data: 'customer_phone', name: 'customer_phone'},
-                       {data: 'customer_address', name: 'customer_address'},
+                         {data: 'order_id', name: 'order_id' },
+                    //    {data: 'customer_address', name: 'customer_address'},
+
                        {data: 'status', name: 'status' },
                        {data: 'created_at', name: 'created_at' },
                        {data: 'action', name: 'action', orderable: false, searchable: false, className :'action-col'},

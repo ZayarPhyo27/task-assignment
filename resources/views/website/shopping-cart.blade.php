@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-       <title>Stylish - Shoes Online Store HTML Template</title>
+       <title>Stylish - Shoes Online Store</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +10,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="author" content="TemplatesJungle">
   <meta name="keywords" content="Online Store">
-  <meta name="description" content="Stylish - Shoes Online Store HTML Template">
+  <meta name="description" content="Stylish - Shoes Online Store">
 
   <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
   <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/vendor.css') }}">
@@ -56,6 +56,7 @@
                     </div>
 
 
+
                 {{-- form --}}
 
                     <div class="row justify-content-around">
@@ -77,26 +78,51 @@
                                         <div class="col"><p class="text-muted mb-2">Delivery Info Detail</p><hr class="mt-0"></div>
                                     </div>
                                             <div class="form-group">
-                                                <label for="NAME" class="small text-muted mb-1">NAME </label>
-                                                <input type="text" class="form-control form-control-sm" name="customer_name" id="customer_name" aria-describedby="helpId" placeholder="Enter your name">
+                                                <label for="NAME" class="small text-muted mb-1">NAME<span class="text-red">*</span> </label>
+                                                <input type="text" class="form-control form-control-sm @error('customer_name') is-invalid @enderror"  value="{{ old('customer_name') }}" name="customer_name" id="customer_name" aria-describedby="helpId" placeholder="Enter your name">
+                                                 @error('customer_name')
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
                                             </div>
                                             <div class="form-group">
-                                                <label for="Address" class="small text-muted mb-1">Address</label>
-                                                <input type="text" class="form-control form-control-sm" name="address" id="address" aria-describedby="helpId" placeholder="Enter your address">
+                                                <label for="Gmail" class="small text-muted mb-1">Gmail Address<span class="text-red">*</span></label>
+                                                <input type="text" class="form-control form-control-sm @error('gmail') is-invalid @enderror" value="{{ old('gmail') }}" name="gmail" id="gmail" aria-describedby="helpId" placeholder="Enter your gmail ">
+                                                 @error('gmail')
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
                                             </div>
                                             <div class="form-group">
-                                                <label for="Phone" class="small text-muted mb-1">Phone Number</label>
-                                                <input type="text" class="form-control form-control-sm" name="phone_number" id="phone_number" aria-describedby="helpId" placeholder="Enter your phone number">
+                                                <label for="Address" class="small text-muted mb-1">Address<span class="text-red">*</span></label>
+                                                <input type="text" class="form-control form-control-sm @error('address') is-invalid @enderror" value="{{ old('address') }}" name="address" id="address" aria-describedby="helpId" placeholder="Enter your address">
+                                                @error('address')
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="Phone" class="small text-muted mb-1">Phone Number<span class="text-red">*</span></label>
+                                                <input type="text" class="form-control form-control-sm @error('customer_phone') is-invalid @enderror" value="{{ old('customer_phone') }}" name="customer_phone" id="customer_phone" aria-describedby="helpId" placeholder="Enter your phone number">
+                                                 @error('customer_phone')
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
                                             </div>
                                             <div class="row mb-md-5">
                                                 <div class="form-group">
-                                                <label for="paymentMethod" class="small text-muted mb-1">PAYMENT METHOD</label>
-                                                <select class="form-control form-control-sm" id="paymentMethod" name="payment_method" required>
+                                                <label for="paymentMethod" class="small text-muted mb-1">PAYMENT METHOD<span class="text-red">*</span></label>
+                                                <select class="form-control form-control-sm @error('payment_method') is-invalid @enderror" id="paymentMethod" name="payment_method" required>
                                                     <option value="">-- Select Payment Method --</option>
                                                     <option value="cod">Cash On Delivery</option>
-                                                    <option value="mobile_banking">Mobile Banking</option>
+                                                    {{-- <option value="mobile_banking">Mobile Banking</option> --}}
                                                     <option value="kbz_pay">KBZ Pay</option>
                                                     <option value="aya_pay">AYA Pay</option>
+                                                    <option value="wave_pay">Wave Pay</option>
                                                 </select>
                                             </div>
                                          <!-- Hidden field for cart data -->
@@ -186,6 +212,7 @@
             </div>
         </div>
     </div>
+
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {

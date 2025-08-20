@@ -34,6 +34,7 @@
                         <th> No</th>
                         <th>Image</th>
                         <th>Name</th>
+                         <th>Quantity</th>
 
                         <th>Description</th>
                          <th>Color</th>
@@ -68,6 +69,7 @@
                        {data: 'DT_RowIndex', name: 'DT_RowIndex', class : 'data-index'},
                        {data: 'image', name: 'image'},
                        {data: 'name', name: 'name'},
+                       {data: 'qty', name: 'qty'},
                        {data: 'description', name: 'description'},
                        {data: 'color', name: 'color'},
 

@@ -7,8 +7,13 @@ use Auth;
 use DataTables;
 use App\Models\Order;
 use App\Models\OrderProduct;
+use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Http;
+use App\Mail\TestMail;
+
 
 
 class OrderController extends Controller
@@ -65,6 +70,9 @@ class OrderController extends Controller
                     ->addColumn('status', function ($row) {
                         return "<span class='badge badge-sm bg-gradient-" . config("web_constant.get_order_status.$row->status") . "'>" . config("web_constant.get_order_status.$row->status") . "</span>";
                     })
+                     ->addColumn('order_id', function ($row) {
+                        return 'ORD_' . str_pad($row->id, 4, '0', STR_PAD_LEFT);
+                    })
                     ->editColumn('created_at', function ($row) {
                         return $row->created_at->format('d M Y');
                     })
@@ -104,8 +112,13 @@ class OrderController extends Controller
     {
 
          $validated = $request->validate([
-                'customer_name' => 'required',
-                'address' => 'required',
+                'customer_name' => 'required|string|max:255',
+                'gmail' => 'required|email',
+                'customer_phone' => [
+                    'required',
+                  'regex:/^(09|01)\d{7,9}$/',
+                ],
+                'address' => 'required|string|max:500',
                 'payment_method' => 'required|string',
                 'cart_data' => 'required',
                 'total' => 'required|numeric',
@@ -120,13 +133,17 @@ class OrderController extends Controller
         $result = true;
         DB::beginTransaction();
         try {
+
             $order = Order::create([
-                'customer_name'           => $validated['customer_name'],
-                'customer_address'        => $request->input('address'), // Add if you collect address
-                'customer_phone'          => $request->input('phone_number'),   // Add if you collect phone
+                'customer_name'   => $validated['customer_name'],
+                'gmail'           => $validated['gmail'],
+                'customer_address'=> $request->input('address'),
+                'customer_phone'  => $request->input('customer_phone'),
                 'payment_method' => $validated['payment_method'],
                 'total'          => $validated['total'],
             ]);
+
+            $orderId = 'ORD_' . str_pad($order->id, 4, '0', STR_PAD_LEFT);
 
              foreach ($cartItems as $item) {
 
@@ -138,6 +155,13 @@ class OrderController extends Controller
                     'quantity'     => $item['quantity'],
                     'image'        => $item['image'] ?? null,
                 ]);
+
+                if (!empty($item['product_id'])) {
+                    $product = Product::find($item['product_id']);
+                    if ($product && $product->qty > 0) {
+                        $product->decrement('qty', 1); // reduces qty by 1
+                    }
+                }
 
             }
 
@@ -152,6 +176,16 @@ class OrderController extends Controller
         }
 
         if($result){
+            Mail::to($validated['gmail'])->send(new TestMail([
+            'subject'        => 'Order Confirmation',
+            'order_id'        => $orderId,
+            'customer_name'  => $request->customer_name,
+            'customer_phone' => $request->customer_phone,
+            'gmail'          => $request->gmail,
+            'address'        => $request->address,
+            'total'          => $request->total,
+        ]));
+
             session(['success' => 'Order was created successfully!']);
         }else{
             session(['error' => 'Order can not create!']);

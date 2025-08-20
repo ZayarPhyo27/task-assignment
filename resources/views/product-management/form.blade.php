@@ -88,6 +88,19 @@
         </div>
     </div>
 
+     <div class="col-md-6">
+        <div class="form-group">
+            <label>{{ __('Quantity') }} <span class="text-red">*</span></label>
+            <input id="qty" type="text" class="form-control @error('qty') is-invalid @enderror" name="qty" value="{{ old('qty', $product->qty) }}" autocomplete="name" autofocus placeholder="Qty">
+
+            @error('qty')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
+        </div>
+    </div>
+
     <div class="row ">
         <div class="col-8">
         </div>
